@@ -1,19 +1,12 @@
-class Kucing:
-    def __init__(self, nama, warna, umur):
-        self.nama = nama
-        self.warna = warna
-        self.umur = umur
-
-    def mengeong(self):
-        print(f"{self.nama} sedang mengeong")
-
+class Animal:
+    def __init__(self, name, age, ras, location):
+        self.name = name
+        self.age = age
+        self.ras = ras
+        self.location = location
+    
     def info(self):
-        print(f"Nama: {self.nama}")
-        print(f"Warna: {self.warna}")
-        print(f"Umur: {self.umur}")
+        print(f"ini adalah {self.name}, berumur {self.age} tahun, ras {self.ras} dan tinggal di {self.location}")
 
-kucing1 = Kucing("Mochi", "Putih", 2)
-kucing2 = Kucing("Oyen", "Orange", 3)
-
-kucing1.mengeong()
-kucing2.info()
+kucing_saya = Animal("Milo", 2, "Persia", "Jakarta")
+kucing_saya.info()
