@@ -1,5 +1,4 @@
 import sys
-import sys
 from PyQt6.QtWidgets import (
     QApplication,
     QMainWindow,
@@ -12,17 +11,20 @@ from PyQt6.QtWidgets import (
 )
 
 
-class MyApplicationFirst(QMainWindow):
+class MyApplication(QMainWindow):
     def __init__(self):
         super().__init__()
-
-        self.setWindowTitle("Pelajaran 1: Dasar PyQt6")
         self.setMinimumSize(1200, 800)
         self.showMaximized()
+
+        self.centralWidget = QWidget()
+        self.setCentralWidget(self.centralWidget)
+
+        self.setWindowTitle("Pelajaran ke 1 : membukan window")
 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = MyApplicationFirst()
+    window = MyApplication()
     window.show()
     sys.exit(app.exec())
